@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for the view to display Miwok word information -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:minHeight="@dimen/listItemHeight"
+    android:orientation="horizontal"
+    android:background="@color/tan_background"
+    android:id="@+id/rootView"
+    tools:context="com.example.android.miwok.PhrasesActivity">
+
+    <ImageView
+        android:id="@+id/wordImage"
+        android:layout_width="@dimen/listItemHeight"
+        android:layout_height="@dimen/listItemHeight" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/wordMiwokView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom"
+                android:textColor="#ffffff"
+                android:paddingLeft="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/wordEnglishView"
+                android:textColor="#ffffff"
+                android:gravity="top"
+                android:layout_width="match_parent"
+                android:paddingLeft="16dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/playIconLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingRight="16dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/playIconDimen"
+                android:layout_height="@dimen/playIconDimen"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_play_arrow" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
